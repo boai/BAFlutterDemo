@@ -107,14 +107,51 @@ class RandomWordsState extends State<RandomWords> {
     return new Scaffold (
       appBar: new AppBar(
         title: new Text('Startup Name Generator'),
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+        ],
       ),
       body: _buildSuggestions(),
     );
   }
 
+  void _pushSaved() {
+    Navigator.of(context).push(
+      new MaterialPageRoute(builder: (context) {
+        final titles = _saved.map((pair) {
+          return new ListTile(
+            title: new Text(
+              pair.asPascalCase,
+              style: _biggerFont,
 
+            ),
 
+          );
+
+        });
+        final divided = ListTile
+            .divideTiles(
+            context: context,
+            tiles: titles,
+          )
+            .toList();
+        return new Scaffold(
+          appBar: new AppBar(
+            title: new Text('Saved Suggestions'),
+            backgroundColor: Colors.red[50],
+          ),
+          backgroundColor: Colors.cyan[100],
+          body: new ListView(
+            children: divided,
+
+          ),
+        );
+      }),
+    );
+
+  }
 
 }
+
 
 
