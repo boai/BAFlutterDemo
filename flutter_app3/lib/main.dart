@@ -64,9 +64,17 @@ class _ListViewDemoState extends State<ListViewDemo> {
       appBar: AppBar(
         title: Text('Test'),
       ),
-      body: new ListView(
-        children: this.listView(),
+
+      body: new ListView.builder(
+          itemCount: 20,
+          itemBuilder: (BuildContext context, int index){
+            return Text('子项：' + index.toString());;
+          },
       ),
+
+//      body: new ListView(
+//        children: this.listView(),
+//      ),
     );
   }
 }
