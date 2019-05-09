@@ -63,6 +63,10 @@ class MyListView extends StatelessWidget {
 }
 
 class MyImageGridView extends StatelessWidget {
+
+  var imageUrl = 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg';
+  var imageFit = BoxFit.fill;
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -75,16 +79,16 @@ class MyImageGridView extends StatelessWidget {
         childAspectRatio: 1.0,
       ),
       children: <Widget>[
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
         new Image.asset('images/car.jpg'),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
-        new Image.network('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=795067152,4208413968&fm=15&gp=0.jpg', fit: BoxFit.contain,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
+        new Image.network(imageUrl, fit: imageFit,),
       ],
     );
   }
